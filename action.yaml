@@ -19,7 +19,7 @@ runs:
       run: |
         mkdir /tmp/.satis-build
         echo "{}" > /tmp/.satis-build/composer.json
-        cmoposer g config allow-plugins true -n
+        composer g config allow-plugins true -n
         composer g require composer/satis:dev-main --prefer-dist \
           --no-cache --no-progress --no-interaction -o \
           --ignore-platform-reqs
