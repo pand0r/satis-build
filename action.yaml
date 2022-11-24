@@ -14,7 +14,6 @@ runs:
   using: "composite"
   steps:
     - env:
-        COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ inputs.token }}"}}'
         COMPOSER_HOME: /tmp/.satis-build
       run: |
         mkdir /tmp/.satis-build
