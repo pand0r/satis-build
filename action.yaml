@@ -15,6 +15,7 @@ runs:
   steps:
     - env:
         COMPOSER_HOME: /tmp/.satis-build
+        COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.APP_SECRET_TOKEN }}"}}'
       run: |
         mkdir /tmp/.satis-build
         echo "{}" > /tmp/.satis-build/composer.json
