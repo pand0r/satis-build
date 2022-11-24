@@ -25,7 +25,7 @@ runs:
 
         php $COMPOSER_HOME/vendor/bin/satis build ${{ inputs.satis_config }} -n
 
-        composer g config github-oauth.github.com ${{ secrets.ACCESS_TOKEN }}
+        composer g config github-oauth.github.com ${{ secrets.APP_SECRET_TOKEN }}
         if cat ${{ inputs.satis_config }} | jq .archive -e; then
           php $COMPOSER_HOME/vendor/bin/satis purge ${{ inputs.satis_config }} -n
         fi
